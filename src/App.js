@@ -1,8 +1,8 @@
 import "./App.css";
-import IndexPage from "./pages/products/IndexPage";
-
+import { RouterProvider } from "react-router-dom";
+import root from "./router/root";
 function App() {
-  return <IndexPage />;
+  return <RouterProvider router={root}></RouterProvider>;
 }
 
 export default App;

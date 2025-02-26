@@ -1,6 +1,8 @@
 import { Suspense, lazy } from "react";
 import todoRouter from "./todoRouter";
 import productRouter from "./productRouter";
+import memberRouter from "./memberRouter";
+
 const { createBrowserRouter } = require("react-router-dom");
 const Loading = <div>Loading....</div>;
 const Main = lazy(() => import("../pages/MainPage"));
@@ -51,6 +53,10 @@ const root = createBrowserRouter([
       </Suspense>
     ),
     children: productRouter(),
+  },
+  {
+    path: "member",
+    children: memberRouter(),
   },
 ]);
 export default root;
